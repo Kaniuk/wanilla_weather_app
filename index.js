@@ -105,6 +105,31 @@ function displayCity(e) {
 
         }
 
+        const cel = document.getElementsByClassName('unitsC')[0];
+
+        function changeUnitsC() {
+            const currentTemperature = document.getElementsByClassName(
+                "current_temperature"
+            )[0];
+            currentTemperature.innerHTML = temp;
+
+        }
+
+        cel.addEventListener('click', changeUnitsC);
+
+
+        const fareng = document.getElementsByClassName('unitsF')[0];
+
+        function changeUnits() {
+            const currentTemperature = document.getElementsByClassName(
+                "current_temperature"
+            )[0];
+            currentTemperature.innerHTML = Math.round((currentTemperature.innerHTML / 18) + 32);
+
+        }
+
+        fareng.addEventListener('click', changeUnits);
+
     }
 
 

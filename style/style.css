@@ -1,3 +1,56 @@
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 60px !important;
+}
+
 .container {
     max-width: 700px !important;
+    border: 1px solid lightskyblue;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+
+    background: rgb(205, 240, 234);
+    background: -moz-linear-gradient(0deg, rgba(205, 240, 234, 1) 0%, rgba(190, 174, 226, 1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(205, 240, 234, 1) 0%, rgba(190, 174, 226, 1) 100%);
+    background: linear-gradient(0deg, rgba(205, 240, 234, 1) 0%, rgba(190, 174, 226, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cdf0ea", endColorstr="#beaee2", GradientType=1);
+}
+
+.date {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 38px;
+
+}
+
+.date_f {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.humidity, .wind_speed {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 25px;
+    margin: 5px;
+}
+
+.current_temperature {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 45px;
+    margin: 5px;
+}
+
+.week_forecast_day {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.temperature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

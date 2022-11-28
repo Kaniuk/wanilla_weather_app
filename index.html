@@ -34,9 +34,9 @@
             </div>
 
         </div>
-        <div class="col">
+        <div class="col date_f">
             <div class="date">
-                <div class="d-flex">
+                <div class="d-flex justify-content-between">
                     <div class="month"></div>
                     <div class="month_date"></div>
                 </div>
@@ -47,36 +47,51 @@
     <div class="row">
         <div class="col">
             <h1 class="entered_city"></h1>
+            <div>humidity:<span class="humidity"></span><span>%</span></div>
+            <div>wind speed:<span class="wind_speed"></span><span>m/s</span></div>
         </div>
-        <div class="col d-flex">
-            <div class="current_temperature"></div>
-            <span class="units"> °C</span>
+        <div class="col temperature">
+            <div class="d-flex">
+                <div class="current_temperature"></div>
+                <span class="units">°C</span>
+            </div>
+            <div class="description"></div>
         </div>
         <div class="col">
-            <img src="" alt="weather img" class="img">
+            <img src="" alt="weather img" class="img" width="200">
         </div>
     </div>
-    <div class="row">
-        <div class="col">
-            <div class="next_date">Temp</div>
-            <span class="units"> °C</span>
-            <img src="#" alt="weather img">
+    <div class="row week_forecast">
+        <div class="col week_forecast_day">
+            <div class="d-flex">
+                <div class="next_date"></div>
+                <span class="units"> °C</span>
+            </div>
+            <img src="#" alt="weather img" class="next_img">
         </div>
-        <div class="col">
-            <div class="next_date">Temp</div>
-            <span class="units"> °C</span>
-            <img src="#" alt="weather img">
+        <div class="col week_forecast_day">
+            <div class="d-flex">
+                <div class="next_date"></div>
+                <span class="units"> °C</span>
+            </div>
+            <img src="#" alt="weather img" class="next_img">
         </div>
-        <div class="col">
-            <div class="next_date">Temp</div>
-            <span class="units"> °C</span>
-            <img src="#" alt="weather img">
+        <div class="col week_forecast_day">
+            <div class="d-flex">
+                <div class="next_date"></div>
+                <span class="units"> °C</span>
+            </div>
+            <img src="#" alt="weather img" class="next_img">
         </div>
-        <div class="col">
-            <div class="next_date">Temp</div>
-            <span class="units"> °C</span>
-            <img src="#" alt="weather img">
+        <div class="col week_forecast_day">
+            <div class="d-flex">
+                <div class="next_date"></div>
+                <span class="units">°C</span>
+                <span class="unitsF">°F</span>
+            </div>
+            <img src="#" alt="weather img" class="next_img">
         </div>
+
     </div>
 </div>
 

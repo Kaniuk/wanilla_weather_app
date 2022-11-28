@@ -48,17 +48,29 @@ h1 {
     margin-top: 10px;
 }
 
+.month_date {
+    margin-left: 15px;
+}
+
 .temperature {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 .units {
     cursor: pointer;
 }
+
 .openSource {
     color: dimgrey;
     font-size: 10px;
     margin-top: 15px;
+}
+
+.next_day,.description,h1 {
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+
 }

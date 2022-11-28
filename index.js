@@ -86,11 +86,17 @@ function displayCity(e) {
             const nextDateTemp = Math.round(response.data.daily[i + 1].temperature.day);
             const iconNext = response.data.daily[i + 1].condition.icon_url;
             const weatherDescription = response.data.daily[i + 1].condition.description;
+            const nextDay = days[now.getDay() + i + 1];
 
 
             const next_date = weekForecast[i].getElementsByClassName('next_date');
             for (let j = 0; j < next_date.length; j++) {
                 next_date[j].innerHTML = nextDateTemp;
+
+            }
+            const next_day = weekForecast[i].getElementsByClassName('next_day');
+            for (let j = 0; j < next_day.length; j++) {
+                next_day[j].innerHTML = nextDay;
 
             }
             const weatherIconNext = weekForecast[i].getElementsByClassName('next_img');
@@ -112,11 +118,9 @@ function displayCity(e) {
                 "current_temperature"
             )[0];
             currentTemperature.innerHTML = temp;
-
         }
 
         cel.addEventListener('click', changeUnitsC);
-
 
         const fareng = document.getElementsByClassName('unitsF')[0];
 
@@ -125,11 +129,9 @@ function displayCity(e) {
                 "current_temperature"
             )[0];
             currentTemperature.innerHTML = Math.round((currentTemperature.innerHTML / 18) + 32);
-
         }
 
         fareng.addEventListener('click', changeUnits);
-
     }
 
 

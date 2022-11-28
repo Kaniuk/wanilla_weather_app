@@ -44,24 +44,40 @@ function displayCity(e) {
     const cityInput = document.getElementsByClassName("city_input")[0];
     const currentCity = cityInput.value;
 
-    const apiKey = "b40b135798f82a05aed08769f9275f50";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${currentCity}&units=metric`;
+    const apiKey = "d1f3fa1bbd2e0t6f3b4o3faabd9a8d79";
+    let url = `https://api.shecodes.io/weather/v1/forecast?query=${currentCity}&units=metric`;
 
     function showWeather(response) {
-        const typedCity = response.data.name;
-        const temp = Math.round(response.data.main.temp);
+        console.log(response.data);
+        const typedCity = response.data.city;
+        const temp = Math.round(response.data.daily[0].temperature.day);
+        const icon = response.data.daily[0].condition.icon_url;
+        const weatherDescription = response.data.daily[0].condition.description;
 
         const city = document.getElementsByClassName("entered_city")[0];
         city.innerHTML = typedCity;
         cityInput.value = "";
 
+        const weatherIcon = document.getElementsByClassName('img')[0];
+        weatherIcon.setAttribute(
+            "src",
+            icon
+        );
+        weatherIcon.setAttribute("alt", weatherDescription);
+
         const currentTemperature = document.getElementsByClassName(
             "current_temperature"
         )[0];
+
         currentTemperature.innerText = temp;
+
+
+
     }
 
-    axios.get(`${url}&appid=${apiKey}`).then(showWeather);
+
+
+    axios.get(`${url}&&key=${apiKey}`).then(showWeather);
 }
 
 const inputForm = document.getElementsByClassName("city_button")[0];
